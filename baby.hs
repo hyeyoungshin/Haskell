@@ -4,7 +4,7 @@ doubleMe x = x + x
 
 doubleUs x y = doubleMe x + doubleMe y
 
-doubleSmallNumber  = if x > 100
+doubleSmallNumber x = if x > 100
                         then x  -- expression not statement
                         else x*2 -- "else part is mandatory"
 
