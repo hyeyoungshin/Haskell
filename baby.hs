@@ -4,11 +4,14 @@ doubleMe x = x + x
 
 doubleUs x y = doubleMe x + doubleMe y
 
+-- Haskell's if is an expression that must return a value, and not a statement
 doubleSmallNumber x = if x > 100
-                        then x  -- expression not statement
-                        else x*2 -- "else part is mandatory"
+                      then x  
+                      else x*2 
 
 doubleSmallNumber' x = (if x > 100 then x else x*2) + 1
+
+doubleSmallNumber'' x = doubleSmallNumber x + 1
 
 conanO'Brien = "It's a me, Conan O'Brien!"
 
@@ -20,6 +23,9 @@ removeNonUppercase st = [ c | c <- st, c `elem` ['A'..'Z']]
 
 factorial :: Integer -> Integer
 factorial n = product [1..n]
+
+factorial' :: Int -> Int
+factorial' n = product [1..n]
 
 circumference :: Float -> Float
 circumference r = 2 * pi * r
