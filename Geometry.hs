@@ -59,4 +59,3 @@ rectArea a b = a * b
 -- it
 
 
-
